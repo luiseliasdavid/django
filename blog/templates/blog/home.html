@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+</head>
+<body>
+    <main>
+        <h1>bienvenido a mi blog</h1>
+        <h2>archivo personal de mis entradas</h2>
+        <p>estas son las entradas recientes</p>
+        {% for post in posts %}
+           <div>
+                <h3> {{ post }} </h3>
+                <span class="date"> {{post.created}} </span>
+                <a href="/blog/{{post.id}}" >ir al post  </a>
+
+           </div>
+        {% endfor %}
+    </main>
+    
+</body>
+</html>

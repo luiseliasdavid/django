@@ -9,6 +9,8 @@ class Post(models.Model):
     content = models.TextField(verbose_name="Contenido")
     created = models.DateTimeField(auto_now_add=True,verbose_name="Creado")
     modified = models.DateTimeField(auto_now=True,verbose_name="Modificado")  
+
+    objects: models.Manager()  # Anotación para pylint
     
     def __str__(self):
         return str(self.title)
